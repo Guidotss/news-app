@@ -10,6 +10,7 @@ environment:
   sdk: ^3.5.4
 
 dependencies:
+  dio: ^5.7.0
   flutter:
     sdk: flutter
   flutter_dotenv: ^5.2.1
@@ -17,7 +18,6 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
-
   flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
