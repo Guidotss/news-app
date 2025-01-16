@@ -32,11 +32,20 @@ class _HomeViewState extends ConsumerState<_HomeView> {
   @override
   Widget build(BuildContext context) {
     final news = ref.watch(newsTopHeadlinesProvider);
-    
-    return const Scaffold(
-      body: Center(
-        child: Text('Home'),
-      ),
-    );
+    if(news.isEmpty) {
+      return const Center(child: Text('No news found'));
+    }
+    return SafeArea(
+      child: ListView.builder(
+      itemCount: news.length,
+      itemBuilder: (context, index) {
+        final article = news[index];
+        return ListTile(
+          title: Text(article.title),
+          subtitle: Text(article.description),
+          leading: Image.network(article.urlToImage),
+        );
+      },
+    ));
   }
 }
