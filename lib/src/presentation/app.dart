@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       routerConfig: appRouter,
-      theme: ThemeData.dark(),
+      theme: AppTheme().getTheme(),
       debugShowCheckedModeBanner: false,
     );
   }
