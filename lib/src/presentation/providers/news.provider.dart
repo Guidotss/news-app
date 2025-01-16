@@ -4,7 +4,6 @@ import 'package:news_app/src/presentation/providers/providers.dart';
 
 final newsTopHeadlinesProvider = StateNotifierProvider<NewsController, List<Article>>((ref) {
   final repository = ref.watch(newsRepositoryProvider);
-  print('Creating NewsController');
   return NewsController(
     getNews: repository.getTopHeadlines,
   );
