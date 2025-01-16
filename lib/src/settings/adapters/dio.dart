@@ -14,6 +14,6 @@ class DioHttpClient implements HttpClient {
 
   @override
   Future<Response<T>> get<T>(String url) async {
-    return await _dio.get(url);
+    return await _dio.get(baseUrl + url);
   }
 }

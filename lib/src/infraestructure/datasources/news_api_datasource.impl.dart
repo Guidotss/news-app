@@ -11,10 +11,8 @@ class NewsApiDatasourceImpl implements NewsApiDatasource {
   @override
   Future<List<Article>> getTopHeadlines() async {
     final response = await _client.get(
-      '/top-headlines?country=ar&category=general',
+      '/top-headlines?country=us&category=general',
     );
-
-    print(response);
     final List<Article> articles = [];
     return articles;
   }
