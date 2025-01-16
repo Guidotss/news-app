@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/src/settings/settings.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp.router(
+      routerConfig: appRouter,
+      theme: ThemeData.dark(),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }

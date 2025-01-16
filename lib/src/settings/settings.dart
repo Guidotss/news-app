@@ -2,4 +2,5 @@
 export 'adapters/dio.dart';
 export 'adapters/dotenv.dart';
 
-//Theme
+// Router
+export 'router/app_router.dart';
