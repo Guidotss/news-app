@@ -7,6 +7,7 @@ abstract class HttpClient {
 
 class DioHttpClient implements HttpClient {
   final Dio _dio;
+  String baseUrl = '';
   DioHttpClient(this._dio) { 
     _dio.options.headers["Authorization"] = Env.newsApiKey;
   }
